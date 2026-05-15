@@ -2,38 +2,20 @@ import { Download, Github, Linkedin } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { IndonesiaMapCard } from "@/features/portfolio/components/indonesiaMapCard";
+import { IndonesiaMapCard } from "@/features/portfolio/components/IndonesiaMapCard";
+import { LanyardCard } from "@/features/portfolio/components/LanyardCard";
 import { profile } from "@/features/portfolio/data/portfolioData";
 
 export function HeroSection() {
+  const summaryParagraphs = profile.summary
+    .split(/\r?\n\r?\n/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+
   return (
     <section className="section-shell py-6 sm:py-8" id="overview">
       <div className="grid gap-5 lg:grid-cols-[280px_1fr]">
-        <Card className="batik-panel reveal self-start overflow-hidden bg-secondary/72 backdrop-blur-md">
-          <CardContent className="relative z-10 p-4">
-            <Badge variant="outline">Portfolio Identity</Badge>
-
-            <h2 className="mt-4 text-2xl font-bold tracking-tight">
-              Frontend Developer
-            </h2>
-
-            <p className="mt-3 text-sm leading-6 text-muted-foreground">
-              Building clean, responsive, and product-ready web experiences with
-              modern frontend tools.
-            </p>
-
-            <div className="mt-5 flex flex-wrap gap-2">
-              {["Next.js", "TypeScript", "React", "Tailwind", "shadcn/ui"].map(
-                (item) => (
-                  <Badge key={item} variant="secondary">
-                    {item}
-                  </Badge>
-                ),
-              )}
-            </div>
-          </CardContent>
-        </Card>
+        <LanyardCard />
 
         <div className="grid gap-4">
           <div className="batik-panel reveal reveal-delay-1 rounded-lg border bg-card/78 p-5 backdrop-blur-md sm:p-6">
@@ -45,12 +27,14 @@ export function HeroSection() {
                 </Badge>
               </div>
 
-              <h1 className="mt-5 text-3xl font-bold tracking-normal text-foreground sm:text-4xl">
+              <h1 className="display-title mt-5 text-5xl font-semibold text-foreground sm:text-6xl">
                 {profile.name}
               </h1>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground">
-                {profile.summary}
-              </p>
+              <div className="mt-4 max-w-2xl space-y-4 text-base leading-7 text-muted-foreground">
+                {summaryParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
 
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-lg border bg-secondary/72 p-4 backdrop-blur-sm">
@@ -88,10 +72,7 @@ export function HeroSection() {
             </Button>
           </div>
 
-     
-            <IndonesiaMapCard />
-           
-          
+          <IndonesiaMapCard />
         </div>
       </div>
     </section>

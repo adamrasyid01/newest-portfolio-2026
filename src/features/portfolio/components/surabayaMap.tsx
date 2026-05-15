@@ -3,7 +3,7 @@
 import L from "leaflet";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
-const surabayaPosition: [number, number] = [-7.2575, 112.7521];
+const surabayaPosition: [number, number] = [-7.2492, 112.7508];
 
 const markerIcon = new L.Icon({
   iconUrl: "/leaflet/marker-icon.png",

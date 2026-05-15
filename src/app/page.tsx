@@ -1,5 +1,10 @@
-import { PortfolioPage } from "@/features/portfolio/components/portfolioPage";
+import { IntroGate } from "@/features/portfolio/components/IntroGate";
+import { PortfolioPage } from "@/features/portfolio/components/PortfolioPage";
 
 export default function Home() {
-  return <PortfolioPage />;
+  return (
+    <IntroGate>
+      <PortfolioPage />
+    </IntroGate>
+  );
 }

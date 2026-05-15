@@ -1,10 +1,10 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { MapPin } from "lucide-react";
+import dynamic from "next/dynamic";
 
 const SurabayaMap = dynamic(
-  () => import("./surabayaMap").then((mod) => mod.SurabayaMap),
+  () => import("./SurabayaMap").then((mod) => mod.SurabayaMap),
   {
     ssr: false,
     loading: () => (
@@ -20,11 +20,8 @@ export function IndonesiaMapCard() {
     <div className="batik-panel rounded-lg border bg-card/78 p-4 backdrop-blur-md">
       <div className="relative z-10 flex items-center justify-between gap-4">
         <div>
-          <p className="text-sm font-semibold">Surabaya, Indonesia</p>
-          <p className="mt-1 max-w-sm text-sm leading-6 text-muted-foreground">
-            Visual region marker untuk profile identity dan remote collaboration
-            coverage.
-          </p>
+          <p className="text-sm font-semibold">Domicile Surabaya, but Always open in every countries</p>
+         
         </div>
 
         <div className="hidden rounded-full bg-accent p-3 text-accent-foreground sm:block">

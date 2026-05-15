@@ -1,131 +1,146 @@
-import {
-  BookOpen,
-  Braces,
-  Code2,
-  Github,
-  GraduationCap,
-  Laptop,
-  Layers3,
-  Mail,
-  MapPin,
-  Network,
-  PanelsTopLeft,
-  Sparkles,
-} from "lucide-react";
-
 export const profile = {
   name: "Adam Rasyid N",
   location: "Surabaya, Indonesia",
   tagline: "Lifelong Learner",
   summary:
-    "Engineering-focused builder from Indonesia, designing product-ready interfaces and turning public work into a clear portfolio system for Next.js and TypeScript.",
+    "I’m a Frontend Developer from Indonesia with a passion for creating clean, responsive, and user-friendly web experiences. I’m currently on a journey to grow into a Full Stack Developer, driven by curiosity, continuous learning, and the ability to adapt quickly to new technologies.I enjoy exploring how both design and development work together to create meaningful digital products. Whether I’m building interfaces, learning backend concepts, or improving my problem-solving skills, I always see every challenge as a chance to grow and become a better developer.",
   github: "https://github.com/adamrasyid01",
-  linkedin: "https://www.linkedin.com/in/your-linkedin",
-  cv: "https://drive.google.com/file/d/your-cv-id/view?usp=sharing",
-  email: "ADD-YOUR-EMAIL@MAIL.COM",
+  linkedin: "https://www.linkedin.com/in/adamrasyid01/",
+  cv: "https://drive.google.com/file/d/1EJKzIvZHfdlXyvKQuL-3SVpjRLra3oTO/view?usp=sharing",
+  email: "adamrasyid01@gmail.com",
+  phone: "Find in my CV",
   avatar: "https://avatars.githubusercontent.com/u/117847146?v=4",
 };
 
 export const navItems = [
   { label: "Overview", href: "#overview" },
-  { label: "Career", href: "#career" },
+  { label: "Journey", href: "#journey" },
   { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
-];
-
-export const career = [
-  {
-    period: "2022 - Present",
-    title: "Public GitHub Builder",
-    body: "A personal builder path centered on public work, experiments, and visible learning.",
-    company: "Personal Builder",
-    Icon: Github,
-  },
-  {
-    period: "Current Base",
-    title: "Electronic Engineering Polytechnic Institute of Surabaya",
-    body: "Technical foundation in electronics, systems thinking, and implementation discipline.",
-    company: "EEPIS Surabaya",
-    Icon: GraduationCap,
-  },
-  {
-    period: "Next Step",
-    title: "Future Team or Company Milestone",
-    body: "Prepared for internship, collaboration, and frontend/product engineering opportunities.",
-    company: "Future Team",
-    Icon: Network,
-  },
-];
-
-export const skillGroups = [
-  {
-    phase: "Career 01",
-    title: "Public Builder",
-    skills: ["Next.js", "TypeScript", "GitHub"],
-    Icon: Code2,
-  },
-  {
-    phase: "Career 02",
-    title: "Engineering Base",
-    skills: ["Electronics", "Systems", "Problem Solving"],
-    Icon: Braces,
-  },
-  {
-    phase: "Career 03",
-    title: "Open Collaborator",
-    skills: ["Frontend", "UI Systems", "Collaboration"],
-    Icon: Layers3,
-  },
+  { label: "Certifications", href: "#certifications" },
 ];
 
 export const projects = [
   {
-    association: "Assoc: Personal Builder",
-    title: "Public GitHub Portfolio",
-    body: "Public repository work associated with the personal builder path in Career Journey.",
-    image: "Code archive and repository workflow",
-    Icon: Github,
+    association: "Assoc: Hardskill Improvement",
+    year: "April 2026",
+    title: "Bakuin - AI Language Checker",
+    body: "An AI-powered language checker for Indonesia word /sentence correction for improving writing quality.",
+    techStack: ["HTML", "CSS", "JavaScript", "Google Gemini API"],
+    logo: "/logo/bakuinLogo.png",
   },
   {
-    association: "Assoc: EEPIS Surabaya",
-    title: "Engineering Project Builds",
+    association: "Assoc: PENS",
+    year: "2024",
+    title: "Ready2Go Applications",
     body: "Engineering-focused work associated with Electronic Engineering Polytechnic Institute of Surabaya.",
-    image: "Electronics prototype and technical workflow",
-    Icon: Laptop,
+    techStack: ["Flutter", "Hive Local Storage"],
+    logo: "/logo/ready2goappLogo.png",
   },
   {
-    association: "Assoc: Future Team",
-    title: "Product Interface Direction",
-    body: "Product interface direction associated with the future team or company milestone.",
-    image: "Frontend interface and shadcn-ready layout",
-    Icon: PanelsTopLeft,
+    association: "Assoc: PENS Final Project",
+    year: "2025",
+    title: "JaTeamCamp - Camping App using Sentiment Analysis and AHP method",
+    body: "Flutter app for booking campsites with AHP-based recommendations.",
+    logo: "/logo/jateamCampLogo.png",
+    techStack: ["Flutter", "Laravel", "AHP Method", "Sentiment Analysis"],
   },
+
+
+  {
+    association: "Hardskill Improvement",
+    year: "2024",
+    title: "Web Calculator",
+    body: "Calculator app built with HTML CSS and JavaScript.",
+    logo: "/logo/calculatorLogo.png",
+    techStack: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    association: "Hardskill Improvement",
+    year: "2024",
+    title: "Simple Age Counter",
+    body: "Age counter app built with HTML CSS and JavaScript.",
+    logo: "/logo/ageCalculatorLogo.png",
+    techStack: ["HTML", "CSS", "JavaScript"],
+  },
+
+
+  {
+    association: "Assoc: PENS",
+    year: "2024",
+    title: "Ready2Go Landing Page",
+    body: "Landing page for Ready2Go application with modern design.",
+    techStack: ["React.js", "Tailwind CSS"],
+    logo: "/logo/ready2gowebLogo.png",
+  },
+  {
+    association: "Assoc: Hardskill Improvement",
+    year: "2023",
+    title: "Powerhuman - HR Management System",
+    body: "A comprehensive HR management system for employee management.",
+    techStack: ["Vue.js", "Node.js", "Laravel"],
+    logo: "/logo/hrisLogo.png",
+  },
+  {
+    association: "Assoc: Hardskill Improvement",
+    year: "Sept 2025",
+    title: "Weather App",
+    body: "A simple weather application that displays current conditions and forecasts. Data from BMKG API and Indonesia geolocation support.",
+    techStack: ["Vue.js", "Tailwind CSS"],
+    logo: "/logo/weatherForecastLogo.png",
+  },
+  {
+    association: "Assoc: Hardskill Improvement",
+    year: "Nov 2025",
+    title: "Cuy Face - Prediction Face App",
+    body: "A face prediction app that uses a OpenRouter API for image analysis. It provides insights and predictions based on facial features.",
+    techStack: ["React.js", "OpenRouterAPI"],
+    logo: "/logo/cuyFaceLogo.png",
+  },
+  {
+    association: "Assoc: Hardskill Improvement",
+    year: "July 2025",
+    title: "BacaTafsir - Quran Tafsir App",
+    body: "A Quran tafsir app that provides detailed explanations and interpretations of Quranic verses.",
+    techStack: ["Vue.js", "Tailwind CSS"],
+    logo: "/logo/bacaTafsirLogo.png",
+  },
+
 ];
 
 export const certifications = [
   {
-    issuer: "Institution / Issuer",
-    title: "Add certification title here.",
-    note: "Issuer, year, and credential detail.",
-    Icon: BookOpen,
+    issuer: "Dicoding Indonesia",
+    title: "Belajar Dasar Pemrograman Web",
+    note: "Online course covering fundamental web programming concepts, including HTML, CSS, JavaScript, and responsive design.",
+    issuerIcon: "/icon/dicodingIcon.png",
+    image: "/certificate/dicodingCertificate.png",
   },
   {
-    issuer: "Institution / Issuer",
-    title: "Add workshop or badge title here.",
-    note: "Online course, workshop, or technical badge.",
-    Icon: Sparkles,
-  },
-];
-
-export const contactMeta = [
-  {
-    label: "Availability",
-    value: "Open for frontend collaboration, internship, and company product work.",
-    Icon: MapPin,
+    issuer: "HackerRank",
+    title: "Problem Solving (Basic) Certificate",
+    note: "Certificate for completing the HackerRank Problem Solving (Basic) challenge, demonstrating proficiency in fundamental problem-solving skills and algorithmic thinking.",
+    issuerIcon: "/icon/hackerrankIcon.png",
+    image: "/certificate/hackerrankCertificate.png",
   },
   {
-    label: "Response",
-    value: "Usually replies within 1-3 days for study, internship, and product inquiries.",
-    Icon: Mail,
+    issuer: "ITBOX",
+    title: "Javascript Beginner, Intermediate, and Advanced",
+    note: "Certificate for completing the HackerRank Problem Solving (Basic) challenge, demonstrating proficiency in fundamental problem-solving skills and algorithmic thinking.",
+    issuerIcon: "/icon/itboxIcon.png",
+    image: "/certificate/itboxCertificate.png",
+  },
+  {
+    issuer: "Buildwithangga",
+    title: "BuildWithAngga (Full-Stack Website Developer: Laravel Vue Nuxt JS - Web HRIS)",
+    note: "Certificate for completing the BuildWithAngga Full-Stack Website Developer course, demonstrating proficiency in Laravel, Vue.js, and Nuxt.js for building web applications.",
+    issuerIcon: "/icon/bwaIcon.png",
+    image: "/certificate/bwaHrisCertificate.png",
+  },
+  {
+    issuer: "IBM Skills Network",
+    title: "Code Generation and Optimization Using IBM Granite",
+    note: "Certificate for completing the IBM Skills Network course on code generation and optimization using IBM Granite.",
+    issuerIcon: "/icon/ibmIcon.png",
+    image: "/certificate/ibmCertificate.png",
   },
 ];

@@ -31,24 +31,24 @@
 
 :root {
   --radius: 0.5rem;
-  --background: #fafafa;
-  --foreground: #18181b;
-  --card: #ffffff;
-  --card-foreground: #18181b;
-  --popover: #ffffff;
-  --popover-foreground: #18181b;
-  --primary: #27272a;
-  --primary-foreground: #fafafa;
-  --secondary: #f4f4f5;
-  --secondary-foreground: #18181b;
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
-  --accent: #eef2ff;
-  --accent-foreground: #18181b;
-  --border: #e4e4e7;
-  --input: #e4e4e7;
-  --ring: #a1a1aa;
-  --batik: #c7c7d2;
+  --background: #f6f0e8;
+  --foreground: #1b1714;
+  --card: #fffaf4;
+  --card-foreground: #1b1714;
+  --popover: #fffaf4;
+  --popover-foreground: #1b1714;
+  --primary: #3a2a22;
+  --primary-foreground: #fbf6f0;
+  --secondary: #eadfce;
+  --secondary-foreground: #342a24;
+  --muted: #efe5d8;
+  --muted-foreground: #7a6c62;
+  --accent: #dcc3a5;
+  --accent-foreground: #3a2c24;
+  --border: #dbcdbd;
+  --input: #dbcdbd;
+  --ring: #b99877;
+  --batik: #bba58e;
 }
 
 * {
@@ -59,19 +59,38 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
 body {
   min-height: 100vh;
+  font-family: var(--font-body), sans-serif;
   background:
-    radial-gradient(circle at 1px 1px, rgb(199 199 210 / 0.28) 1px, transparent 0) 0 0 / 24px 24px,
-    linear-gradient(180deg, #fafafa 0%, #f8fafc 45%, #fafafa 100%);
+    radial-gradient(circle at 1px 1px, rgb(187 165 142 / 0.2) 1px, transparent 0) 0 0 / 24px 24px,
+    linear-gradient(180deg, #f8f2ea 0%, #f3ebdf 46%, #f7f0e8 100%);
   color: var(--foreground);
   font-feature-settings: "cv11", "ss01";
   text-rendering: optimizeLegibility;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.04em;
+}
+
+code,
+pre,
+.font-mono {
+  font-family: var(--font-code), monospace;
+}
+
 ::selection {
-  background: #dbe4ff;
-  color: #18181b;
+  background: #dcc3a5;
+  color: #1b1714;
 }
 
 .batik-panel {
@@ -86,11 +105,23 @@ body {
   inset: 0;
   opacity: 0.55;
   background:
-    radial-gradient(circle at 12px 12px, rgb(199 199 210 / 0.46) 2px, transparent 2.5px),
-    radial-gradient(circle at 36px 36px, rgb(199 199 210 / 0.3) 2px, transparent 2.5px),
-    linear-gradient(135deg, transparent 43%, rgb(199 199 210 / 0.32) 44%, rgb(199 199 210 / 0.32) 46%, transparent 47%);
+    radial-gradient(circle at 12px 12px, rgb(187 165 142 / 0.32) 2px, transparent 2.5px),
+    radial-gradient(circle at 36px 36px, rgb(220 195 165 / 0.26) 2px, transparent 2.5px),
+    linear-gradient(135deg, transparent 43%, rgb(187 165 142 / 0.2) 44%, rgb(187 165 142 / 0.2) 46%, transparent 47%);
   background-size: 48px 48px;
   mask-image: linear-gradient(90deg, transparent 0%, black 62%, black 100%);
+}
+
+.eyebrow {
+  font-family: var(--font-code), monospace;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.display-title {
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.05em;
+  line-height: 0.96;
 }
 
 .section-shell {
