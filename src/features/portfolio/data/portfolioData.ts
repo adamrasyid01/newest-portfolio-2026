@@ -125,7 +125,7 @@ export const certifications = [
   {
     issuer: "ITBOX",
     title: "Javascript Beginner, Intermediate, and Advanced",
-    note: "Certificate for completing the HackerRank Problem Solving (Basic) challenge, demonstrating proficiency in fundamental problem-solving skills and algorithmic thinking.",
+    note: "Certificates for completing ITBOX JavaScript courses at beginner, intermediate, and advanced levels, demonstrating proficiency in JavaScript programming concepts and best practices.",
     issuerIcon: "/icon/itboxIcon.png",
     image: "/certificate/itboxCertificate.png",
   },
