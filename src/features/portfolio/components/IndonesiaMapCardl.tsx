@@ -20,7 +20,7 @@ export function IndonesiaMapCard() {
     <div className="batik-panel rounded-lg border bg-card/78 p-4 backdrop-blur-md">
       <div className="relative z-10 flex items-center justify-between gap-4">
         <div>
-          <p className="text-sm font-semibold">Domicile Surabaya, but Always open in every countries</p>
+          <p className="text-sm font-semibold">Domicile Surabaya, but Always open opportunities in every countries</p>
          
         </div>
 
