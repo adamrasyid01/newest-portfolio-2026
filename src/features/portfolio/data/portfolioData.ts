@@ -94,7 +94,7 @@ export const projects = [
     title: "Cuy Face - Prediction Face App",
     body: "A face prediction app that uses a OpenRouter API for image analysis. It provides insights and predictions based on facial features.",
     techStack: ["React.js", "OpenRouterAPI"],
-    logo: "/logo/cuyFaceLogo.png",
+    logo: "/logo/cuyfaceLogo.png",
   },
   {
     association: "Assoc: Hardskill Improvement",
@@ -102,7 +102,7 @@ export const projects = [
     title: "BacaTafsir - Quran Tafsir App",
     body: "A Quran tafsir app that provides detailed explanations and interpretations of Quranic verses.",
     techStack: ["Vue.js", "Tailwind CSS"],
-    logo: "/logo/bacaTafsirLogo.png",
+    logo: "/logo/bacatafsirLogo.png",
   },
 
 ];
