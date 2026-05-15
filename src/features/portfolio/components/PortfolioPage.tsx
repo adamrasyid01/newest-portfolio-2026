@@ -1,4 +1,4 @@
-import { SiteHeader } from "./siteHeader";
+import { SiteHeader } from "./SiteHeader"
 import { CareerSection } from "@/features/portfolio/sections/CareerSection";
 import { CertificationsSection } from "@/features/portfolio/sections/CertificationsSection";
 import { ContactSection } from "@/features/portfolio/sections/ContactSection";
