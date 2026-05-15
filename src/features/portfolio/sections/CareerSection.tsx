@@ -27,7 +27,7 @@ const journeyDetails = [
       "Taught basic programming concepts and web development to high school students, fostering their interest in technology and coding.",
     company: "Self Learning Phase",
 
-    logoSrc: "/logo/sangJuaraLogo.png",
+    logoSrc: "/logo/sangjuaraLogo.png",
   },
   
   {
