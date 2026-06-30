@@ -6,7 +6,7 @@ export const profile = {
     "I’m a Frontend Developer from Indonesia with a passion for creating clean, responsive, and user-friendly web experiences. I’m currently on a journey to grow into a Full Stack Developer, driven by curiosity, continuous learning, and the ability to adapt quickly to new technologies.I enjoy exploring how both design and development work together to create meaningful digital products. Whether I’m building interfaces, learning backend concepts, or improving my problem-solving skills, I always see every challenge as a chance to grow and become a better developer.",
   github: "https://github.com/adamrasyid01",
   linkedin: "https://www.linkedin.com/in/adamrasyid01/",
-  cv: "https://drive.google.com/file/d/1EJKzIvZHfdlXyvKQuL-3SVpjRLra3oTO/view?usp=sharing",
+  cv: "https://drive.google.com/file/d/1MzEgllV4-awKv4F2-yAxvN8_UIgwywF9/view?usp=sharing",
   email: "adamrasyid01@gmail.com",
   phone: "Find in my CV",
   avatar: "https://avatars.githubusercontent.com/u/117847146?v=4",
