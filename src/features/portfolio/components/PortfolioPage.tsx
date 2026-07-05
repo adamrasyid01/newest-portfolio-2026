@@ -23,7 +23,7 @@ export function PortfolioPage() {
         </main>
 
         <footer className="section-shell py-8 text-center text-sm text-muted-foreground">
-          v.1.0.0 Build May 2026 © Adam Rasyid N 
+          v.1.0.1 Build May 2026 © Adam Rasyid N 
         </footer>
       </div>
     </div>
