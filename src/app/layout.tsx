@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   Cormorant_Garamond,
   IBM_Plex_Mono,
@@ -7,6 +7,8 @@ import {
 
 import { Navbar } from "@/components/layout/Navbar";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE_CONFIG } from "@/lib/constants";
 
 import "./globals.css";
 
@@ -27,7 +29,69 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500", "600"],
 });
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: SITE_CONFIG.themeColor.light },
+    { media: "(prefers-color-scheme: dark)", color: SITE_CONFIG.themeColor.dark },
+  ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.siteUrl),
+  title: {
+    default: SITE_CONFIG.title,
+    template: `%s | ${SITE_CONFIG.name}`,
+  },
+  description: SITE_CONFIG.description,
+  keywords: [...SITE_CONFIG.keywords],
+  authors: [{ name: SITE_CONFIG.author.name, url: SITE_CONFIG.author.url }],
+  creator: SITE_CONFIG.name,
+  publisher: SITE_CONFIG.name,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: SITE_CONFIG.locale,
+    url: SITE_CONFIG.siteUrl,
+    siteName: `${SITE_CONFIG.name} Portfolio`,
+    title: SITE_CONFIG.title,
+    description: SITE_CONFIG.description,
+    images: [
+      {
+        url: SITE_CONFIG.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${SITE_CONFIG.name} Portfolio`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_CONFIG.title,
+    description: SITE_CONFIG.description,
+    creator: "@adamrasyid01",
+    images: [SITE_CONFIG.ogImage],
+  },
   icons: {
     icon: [
       { url: "/icon/metaIcon.png", type: "image/png" },
@@ -36,9 +100,7 @@ export const metadata: Metadata = {
     shortcut: "/icon/metaIcon.png",
     apple: "/icon/metaIcon.png",
   },
-  title: "Adam Rasyid N Portfolio",
-  description:
-    "Personal portfolio for Adam Rasyid N, built with Next.js, TypeScript, Tailwind CSS, and shadcn-style components.",
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -49,6 +111,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
+        <JsonLd />
         <script
           dangerouslySetInnerHTML={{
             __html: `

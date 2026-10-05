@@ -1,7 +1,74 @@
 /**
- * Centralized Application & Theme Constants
+ * Centralized Application, Theme & SEO Constants
  * Path: src/lib/constants.ts
  */
+
+export const SITE_CONFIG = {
+  name: "Adam Rasyid N",
+  shortName: "Adam Rasyid",
+  domain: "adamrasyid.my.id",
+  siteUrl: "https://adamrasyid.my.id",
+  title: "Adam Rasyid N | Software Engineer & Frontend Developer",
+  description:
+    "Portfolio of Adam Rasyid N — Frontend & aspiring Full-Stack Developer specializing in clean, responsive, and performance-driven web and mobile applications using Next.js, TypeScript, React, and Flutter.",
+  keywords: [
+    "Adam Rasyid",
+    "Adam Rasyid N",
+    "Adam Rasyid Nur Muhammad",
+    "Software Engineer",
+    "Frontend Developer",
+    "Full Stack Developer",
+    "Web Developer Indonesia",
+    "Surabaya Developer",
+    "React Developer",
+    "Next.js Portfolio",
+    "TypeScript",
+    "Flutter Developer",
+    "UI/UX Engineering",
+    "PENS Surabaya",
+  ],
+  author: {
+    name: "Adam Rasyid N",
+    url: "https://adamrasyid.my.id",
+    github: "https://github.com/adamrasyid01",
+    linkedin: "https://www.linkedin.com/in/adamrasyid01/",
+    email: "adamrasyid01@gmail.com",
+    location: "Surabaya, Indonesia",
+  },
+  ogImage: "/og-image.png",
+  locale: "en_US",
+  themeColor: {
+    dark: "#0c0c0b",
+    light: "#F4F0E8",
+  },
+} as const;
+
+export const SEO_PAGES = {
+  overview: {
+    title: "Overview",
+    description:
+      "Discover Adam Rasyid N's background, core competencies, frontend architecture focus, and passion for crafting modern, responsive digital products.",
+    canonical: "/overview",
+  },
+  journey: {
+    title: "Journey",
+    description:
+      "Explore Adam Rasyid N's career milestones, professional experience, academic background at PENS, and continuous learning timeline.",
+    canonical: "/journey",
+  },
+  projects: {
+    title: "Projects",
+    description:
+      "Showcase of featured web and mobile applications, including Bakuin AI Language Checker, Ready2Go, JaTeamCamp, and modern frontend solutions.",
+    canonical: "/projects",
+  },
+  certifications: {
+    title: "Certifications",
+    description:
+      "Verified professional credentials, course achievements, and skill milestones from industry-leading tech platforms and academies.",
+    canonical: "/certifications",
+  },
+} as const;
 
 export const THEME_COLORS = {
   // Prisma Signature Colors
