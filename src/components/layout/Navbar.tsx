@@ -48,10 +48,10 @@ export function Navbar() {
 
   return (
     <nav
-      className="fixed left-1/2 top-4 z-50 -translate-x-1/2 sm:top-5"
+      className="fixed left-1/2 top-3 z-50 -translate-x-1/2 w-max max-w-[calc(100vw-1.5rem)] px-1 sm:top-5"
       aria-label="Main Navigation"
     >
-      <div className="flex items-center gap-1 rounded-full border border-[#D1C9B8]/80 bg-[#F4F0E8]/85 p-1.5 transition-colors duration-300 dark:border-white/20 dark:bg-black/45 sm:gap-2">
+      <div className="flex items-center gap-0.5 rounded-full border border-[#D1C9B8]/80 bg-[#F4F0E8]/90 p-1 shadow-lg shadow-black/5 backdrop-blur-md transition-colors duration-300 dark:border-white/20 dark:bg-black/60 dark:shadow-black/30 sm:gap-2 sm:p-1.5">
         {navItems.map((item) => {
           const isActive = activeHref === item.href;
 
@@ -64,7 +64,7 @@ export function Navbar() {
               onTouchStart={() => router.prefetch(item.href)}
               onClick={() => setActiveHref(item.href)}
               className={cn(
-                "relative rounded-full px-3.5 py-1.5 text-xs font-medium tracking-wide transition-colors duration-150 sm:px-4 sm:text-sm",
+                "relative rounded-full px-2.5 py-1 text-[11px] font-medium tracking-tight transition-colors duration-150 sm:px-4 sm:py-1.5 sm:text-sm sm:tracking-wide",
                 isActive
                   ? "font-semibold text-primary-foreground"
                   : "text-[#6F695C] hover:text-[#221F1B] dark:text-white/75 dark:hover:text-white"
@@ -82,7 +82,16 @@ export function Navbar() {
                   }}
                 />
               )}
-              <span className="relative z-10">{item.label}</span>
+              <span className="relative z-10 whitespace-nowrap">
+                {item.label === "Certifications" ? (
+                  <>
+                    <span className="sm:hidden">Certs</span>
+                    <span className="hidden sm:inline">Certifications</span>
+                  </>
+                ) : (
+                  item.label
+                )}
+              </span>
             </Link>
           );
         })}
@@ -92,12 +101,12 @@ export function Navbar() {
           type="button"
           onClick={toggleTheme}
           aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-          className="relative ml-0.5 flex h-7 w-7 items-center justify-center rounded-full border border-black/10 bg-black/5 text-neutral-800 transition-all hover:scale-105 hover:bg-black/10 dark:border-white/20 dark:bg-white/10 dark:text-white/80 dark:hover:bg-white/20 cursor-pointer sm:h-8 sm:w-8"
+          className="relative ml-0.5 flex h-6 w-6 items-center justify-center rounded-full border border-black/10 bg-black/5 text-neutral-800 transition-all hover:scale-105 hover:bg-black/10 dark:border-white/20 dark:bg-white/10 dark:text-white/80 dark:hover:bg-white/20 cursor-pointer sm:ml-1 sm:h-8 sm:w-8"
         >
           {isDark ? (
-            <Moon className="h-3.5 w-3.5 text-primary transition-transform duration-200" />
+            <Moon className="h-3 w-3 text-primary transition-transform duration-200 sm:h-3.5 sm:w-3.5" />
           ) : (
-            <Sun className="h-3.5 w-3.5 text-amber-600 transition-transform duration-200" />
+            <Sun className="h-3 w-3 text-amber-600 transition-transform duration-200 sm:h-3.5 sm:w-3.5" />
           )}
         </button>
       </div>
