@@ -1,10 +1,5 @@
-import { IntroGate } from "@/features/portfolio/components/IntroGate";
-import { PortfolioPage } from "@/features/portfolio/components/PortfolioPage";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <IntroGate>
-      <PortfolioPage />
-    </IntroGate>
-  );
+  redirect("/overview");
 }
